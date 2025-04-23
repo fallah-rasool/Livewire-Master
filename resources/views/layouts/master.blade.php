@@ -17,7 +17,7 @@
                         <a class="text-white bg-gradient-to-r" href="{{ route('index.page')}}">index</a>
                     </li>
                     <li style="padding: 7px ;margin: 0 5px;">
-                        <a class="text-white bg-gradient-to-r" href="">Todo</a>
+                        <a class="text-white bg-gradient-to-r"  href="{{ route('post.crate') }}">post.crate</a>
                     </li>
                 </ul>
             </nav>

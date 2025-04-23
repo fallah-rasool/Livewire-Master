@@ -23,7 +23,7 @@
                         <a href="{{ route('index.page') }}">index</a>
                     </li>
                     <li style="padding: 7px ;margin: 0 5px;">
-                        <a href="#">Todo</a>
+                        <a href="{{ route('post.crate') }}">post.crate</a>
                     </li>
                 </ul>
             </nav>
