@@ -31,6 +31,15 @@
    
         
         {{ $slot }}
+
+        <Footer class="max-w-xl mx-auto p-5 m-5 text-white bg-green-700">
+            <H2>Footer</H2>
+            <hr>
+            <div>
+                {{ $copyright ?? 'All Raiteg ....'  }}
+            </div>
+        </Footer>
+
         
         {{-- @livewireScripts      --}}
         <script src="https://cdn.tailwindcss.com"></script>
