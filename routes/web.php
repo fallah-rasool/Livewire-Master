@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\CalendarComponent;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Counter;
 use App\Livewire\Dashboard;
@@ -41,3 +42,4 @@ Route::get('/creat-user',static function(){
 
 
 Route::get('/user/{user}',Profile::class)->name('page.user-profile');
+Route::get('/CalendarComponent',CalendarComponent::class)->name('page.calendar.component');

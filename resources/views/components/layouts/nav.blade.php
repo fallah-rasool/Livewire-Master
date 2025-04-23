@@ -12,11 +12,15 @@
                 <a href="{{ route('post.crate') }}">post.crate</a>
             </li>
             <li style="padding: 7px ;margin: 0 5px;">
+                <a href="{{ route('page.calendar.component')}}">calendar</a>
+            </li>
+            <li style="padding: 7px ;margin: 0 5px;">
                 <a href="{{ route('Page.Welcom',['email'=>'rasool@gmail.com']) }}">post.Welcom</a>
             </li>
             <li style="padding: 7px ;margin: 0 5px;">
                 <a href="{{ route('page.user-profile',['user'=>1])}}">user</a>
             </li>
+          
         </ul>
     </nav>
 </div>
