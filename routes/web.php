@@ -10,4 +10,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('index',Index::class);
+Route::get('counter',Counter::class)->name('counter.page');
+
+Route::get('index',Index::class)->name('index.page');

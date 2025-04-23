@@ -28,9 +28,11 @@ class Index extends Component
     {  
         $this->tasks = []; // پاک کردن تمامی تسک‌ها  
     }  
-
+ 
     public function render()
     {
-        return view('livewire.todo.index');
+        return view('livewire.todo.index')
+        ->layout('components.layouts.with-navigation')
+      ;
     }
 }

@@ -39,6 +39,7 @@ return [
     */
 
     'layout' => 'components.layouts.app',
+    // 'layout' => 'components.layouts.with-navigation',
 
     /*
     |---------------------------------------------------------------------------
