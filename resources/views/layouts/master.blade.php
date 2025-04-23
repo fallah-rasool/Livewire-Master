@@ -6,7 +6,8 @@
         <title>{{ $title ?? 'Page Title' }}</title>
     </head>
     <body>
-        <header style="display: flex; justify-content: space-between;align-items: center; background-color: #763515; padding: 0 30px; gap: 32px; text-white;p-5">
+        @include('components.layouts.nav')
+        {{-- <header style="display: flex; justify-content: space-between;align-items: center; background-color: #763515; padding: 0 30px; gap: 32px; text-white;p-5">
             <h1 class="text-white bg-gradient-to-r">layouts  Secondary </h1>
             <nav >
                 <ul style="display: flex; align-items: center; justify-content: center; gap:64px ; align-content: center;list-style: none;padding: 0 ;margin: 0;">
@@ -21,7 +22,7 @@
                     </li>
                 </ul>
             </nav>
-        </header>
+        </header> --}}
 
             @yield('content')
 
