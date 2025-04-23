@@ -31,8 +31,8 @@ class Index extends Component
  
     public function render()
     {
-        return view('livewire.todo.index')
-        ->layout('components.layouts.with-navigation')
-      ;
+        return view('livewire.todo.index') 
+        ->extends('layouts.master');
+        // ->section('app');    
     }
 }
