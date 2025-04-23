@@ -6,13 +6,14 @@ use Livewire\Component;
 
 class Item extends Component
 {
-    public string $task='';
-    public bool $isDone= false;
-    
-    public function togggle()
-    {
-        $this->isDone = !$this->isDone;
-    }
+    public $task; // نام تسک  
+    public $isDone = false; // وضعیت انجام شده یا نشده تسک  
+
+    // متد برای تغییر وضعیت انجام شده/نشده  
+    public function toggle()  
+    {  
+        $this->isDone = !$this->isDone; // تغییر وضعیت  
+    }  
 
 
     public function render()
