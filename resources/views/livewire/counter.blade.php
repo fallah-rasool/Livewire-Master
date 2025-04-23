@@ -12,6 +12,22 @@
     wire:click="decrement"
     type="button" class="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium  text-sm px-5 py-2.5 text-center me-2 mb-2 ">-</button>
 
+    @script
+        <script>
+        console.log('this is goood .....');
+        setInterval(tack, 1000);
+        let isPing =true;
+        function tack(){
+            let content = (isPing ? 'Ping' : 'pong');
+            console.log(`[posts-create] ${content}`);
+        $wire.title = content;
+            isPing = !isPing;
+        }
+        </script>
+    @endscript
+
+
+
 
     {{-- If your happiness depends on money, you will never be happy with yourself. --}}
 </div>
