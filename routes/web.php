@@ -9,6 +9,7 @@ use App\Livewire\Post;
 use App\Livewire\Post\PostCreat;
 use App\Livewire\PostWelcome;
 use App\Livewire\Profile;
+use App\Livewire\SecurityConcerns;
 use App\Livewire\ShowCustomer;
 use App\Livewire\Todo\Index;
 use App\Models\User;
@@ -49,3 +50,4 @@ Route::get('/CalendarComponent',CalendarComponent::class)->name('page.calendar.c
 
 Route::get('/ShowCustomer',ShowCustomer ::class)->name('Page.Show-Customer');
 Route::get('/CounterAlpine',CounterAlpine ::class)->name('Page.CounterAlpine');
+Route::get('/SecurityConcerns',SecurityConcerns ::class)->name('Page.SecurityConcerns');
