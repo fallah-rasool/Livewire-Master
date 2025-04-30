@@ -3,6 +3,7 @@
 use App\Livewire\CalendarComponent;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Counter;
+use App\Livewire\CounterAlpine;
 use App\Livewire\Dashboard;
 use App\Livewire\Post;
 use App\Livewire\Post\PostCreat;
@@ -47,3 +48,4 @@ Route::get('/CalendarComponent',CalendarComponent::class)->name('page.calendar.c
 
 
 Route::get('/ShowCustomer',ShowCustomer ::class)->name('Page.Show-Customer');
+Route::get('/CounterAlpine',CounterAlpine ::class)->name('Page.CounterAlpine');
