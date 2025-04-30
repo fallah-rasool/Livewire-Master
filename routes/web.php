@@ -8,6 +8,7 @@ use App\Livewire\Post;
 use App\Livewire\Post\PostCreat;
 use App\Livewire\PostWelcome;
 use App\Livewire\Profile;
+use App\Livewire\ShowCustomer;
 use App\Livewire\Todo\Index;
 use App\Models\User;
 use Illuminate\Support\Carbon;
@@ -16,7 +17,7 @@ use PhpParser\Node\Expr\PostDec;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::get('counter',Counter::class)->name('counter.page');
 
@@ -43,3 +44,6 @@ Route::get('/creat-user',static function(){
 
 Route::get('/user/{user}',Profile::class)->name('page.user-profile');
 Route::get('/CalendarComponent',CalendarComponent::class)->name('page.calendar.component');
+
+
+Route::get('/ShowCustomer',ShowCustomer ::class)->name('Page.Show-Customer');
