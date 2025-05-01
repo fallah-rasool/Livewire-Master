@@ -34,6 +34,7 @@ class SecurityConcerns extends Component
 
     public function render()
     {
-        return view('livewire.security-concerns');
+        return view('livewire.security-concerns')
+        ->layout('components.layouts.with-navigation');
     }
 }

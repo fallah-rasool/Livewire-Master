@@ -5,14 +5,16 @@ use Illuminate\Support\Facades\Route;
 use App\Livewire\Counter;
 use App\Livewire\CounterAlpine;
 use App\Livewire\Dashboard;
-use App\Livewire\Post;
+use App\Livewire\EditPost;
 use App\Livewire\Post\PostCreat;
+use App\Livewire\PostLivewire;
 use App\Livewire\PostWelcome;
 use App\Livewire\Profile;
 use App\Livewire\SecurityConcerns;
 use App\Livewire\ShowCustomer;
 use App\Livewire\Todo\Index;
 use App\Models\User;
+use App\Models\Post;
 use Illuminate\Support\Carbon;
 use PhpParser\Node\Expr\PostDec;
 
@@ -51,3 +53,18 @@ Route::get('/CalendarComponent',CalendarComponent::class)->name('page.calendar.c
 Route::get('/ShowCustomer',ShowCustomer ::class)->name('Page.Show-Customer');
 Route::get('/CounterAlpine',CounterAlpine ::class)->name('Page.CounterAlpine');
 Route::get('/SecurityConcerns',SecurityConcerns ::class)->name('Page.SecurityConcerns');
+
+
+Route::get('/post', PostLivewire::class)->name('all.post');
+Route::get('/edit-post/{post}', EditPost::class)->name('edit.post');
+
+Route::get('/creat-post',static function(){
+   $user =  Post::create(
+       [
+            'title'=>"عنوان پیش فرض",
+            'content'=>"محتوای پیش فرض",
+         ]
+       );
+   return   redirect()->back();
+      
+})->name('creat.post');

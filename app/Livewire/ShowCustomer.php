@@ -18,6 +18,7 @@ class ShowCustomer extends Component
 
     public function render()
     {
-        return view('livewire.show-customer');
+        return view('livewire.show-customer')
+        ->layout('components.layouts.with-navigation');
     }
 }

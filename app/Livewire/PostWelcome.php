@@ -16,6 +16,7 @@ class PostWelcome extends Component
 
     public function render()
     {
-        return view('livewire.post-welcome');
+        return view('livewire.post-welcome')
+        ->layout('components.layouts.with-navigation');
     }
 }
