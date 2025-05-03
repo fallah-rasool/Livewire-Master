@@ -7,6 +7,7 @@ use App\Livewire\CounterAlpine;
 use App\Livewire\Dashboard;
 use App\Livewire\EditPost;
 use App\Livewire\Post\PostCreat;
+use App\Livewire\PostComments;
 use App\Livewire\PostLivewire;
 use App\Livewire\PostWelcome;
 use App\Livewire\Profile;
@@ -68,3 +69,5 @@ Route::get('/creat-post',static function(){
    return   redirect()->back();
       
 })->name('creat.post');
+
+Route::get('/posts/{post}', PostComments::class)->name('post.comments');

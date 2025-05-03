@@ -96,12 +96,8 @@
                     <li>
                         <a    
                         class="text-gray-900 dark:text-white hover:underline" 
-
                         href="{{ route('all.post')}}">همه  پست</a>
-                    </li>
-                   
-                  
-                </ul>
+                    </li>                   </ul>
             </div>
         </div>
     </nav>
