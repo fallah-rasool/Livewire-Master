@@ -17,6 +17,7 @@ use App\Livewire\Todo\Index;
 use App\Models\User;
 use App\Models\Post;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Auth;
 use PhpParser\Node\Expr\PostDec;
 
 
@@ -71,3 +72,32 @@ Route::get('/creat-post',static function(){
 })->name('creat.post');
 
 Route::get('/posts/{post}', PostComments::class)->name('post.comments');
+
+
+
+Route::get('/simulate-login', function () {
+    $user = User::first();
+    Auth::login($user);
+    return redirect('/');
+})->name('simulate-login');
+
+Route::get('/logout', function () {  
+    Auth::logout(); // کاربر رو لاگ‌ آوت می‌کنه  
+    return redirect('/'); // یا هر صفحه‌ای که می‌خوای بعد از logout بره  
+})->name('logout');
+
+
+Route::get('/login-byId/{id}', function ($id) {
+    $user = User::find($id);
+
+    if ($user) {
+        Auth::login($user);
+        return redirect('/');
+        // return "✅ کاربر با ID {$id} با موفقیت لاگین شد. نام: {$user->name}";
+    } else {
+        return "❌ کاربری با این ID پیدا نشد.";
+    }
+})->name('login-by-id');
+
+Route::get('/todos', \App\Livewire\ShowTodos::class)->middleware('auth')->name('todos');
+

@@ -41,8 +41,26 @@
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">laravel_12_Livewire_Master</span>
             </a>
             <div class="flex items-center space-x-6 rtl:space-x-reverse">
-                <a href="tel:5541251234" class="text-sm  text-gray-500 dark:text-white hover:underline">(555) 412-1234</a>
-                <a href="#" class="text-sm  text-blue-600 dark:text-blue-500 hover:underline">Login</a>
+                @auth
+                <div class="flex items-center space-x-6 rtl:space-x-reverse">
+                    <div class="text-white">
+                        سلام
+                        <strong>
+                            {{ auth()->user()->name }}
+                        </strong>
+                         
+                    </div>
+                    <a href="{{ route('logout') }}" class="text-sm  text-blue-600 dark:text-blue-500 hover:underline">logout</a>
+                </div>
+            @else
+                    <div class="flex items-center space-x-6 rtl:space-x-reverse">
+                        <div class="text-white">
+                            شما لاگین نیستید
+                        </div>
+                        <a href="{{ route('simulate-login') }}" class="text-sm  text-blue-600 dark:text-blue-500 hover:underline">Login</a>
+                    </div>
+                </div>
+            @endauth 
             </div>
         </div>
     </nav>
@@ -81,23 +99,21 @@
 
                         href="{{ route('Page.Show-Customer')}}">Show-Customer</a>
                     </li>
-                    {{-- <li>
-                        <a    
-                        class="text-gray-900 dark:text-white hover:underline" 
-
-                        href="{{ route('page.counter.alpine')}}">counterAlpine</a>
-                    </li> --}}
-                    {{-- <li>
-                        <a    
-                        class="text-gray-900 dark:text-white hover:underline" 
-
-                        href="{{ route('page.security.concerns')}}">securityConcerns</a>
-                    </li> --}}
+                   
+                  
                     <li>
                         <a    
                         class="text-gray-900 dark:text-white hover:underline" 
                         href="{{ route('all.post')}}">همه  پست</a>
-                    </li>                   </ul>
+                    </li>  
+                    <li>
+                        <a    
+                        class="text-gray-900 dark:text-white hover:underline" 
+
+                        href="{{ route('todos')}}">todos</a>
+                    </li> 
+                    
+                               </ul>
             </div>
         </div>
     </nav>
